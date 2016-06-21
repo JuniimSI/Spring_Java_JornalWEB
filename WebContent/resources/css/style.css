@@ -1,0 +1,84 @@
+@CHARSET "UTF-8";
+/*
+ * style.css 
+ */
+.container, .container-fluid {
+ padding-right: 15px;
+ padding-left: 15px;
+ background-color: #776767;
+border-radius: 7px;
+
+}
+#textoNot{
+	
+	text-indent: 50px;
+	text-align: justify;
+}
+h2, h3{
+	color: #fff;
+}
+
+.central{
+	margin : 0 auto;
+}
+.slider {
+     overflow-x: scroll;	
+}
+.row {
+ margin-bottom: 20px;
+ border-radius: 4px;
+}
+[class*="col-"], header, footer, nav, aside, section, div[role="main"] {
+ padding-top: 15px;
+  background-image: url(../images/fundo.png);
+ padding-bottom: 15px;
+ background-color: #f5f5f5;
+ background-color: rgba(86,61,124,.15);
+ border: 1px solid #ddd;
+ border: 1px solid rgba(86,61,124,.2);
+ text-align: center;
+ 
+ 
+
+}
+div[role="main"] {  
+  overflow-x: scroll;
+   background-image: url(../images/fundo.png);
+ 
+}
+
+.ess{
+	  overflow-x: scroll;
+}
+
+
+
+div[role="main"], nav, aside {
+ height: 600px;
+  background-image: url(../images/fundo.png);
+}
+
+.btns{
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 2px solid black;
+  color: black;
+  background-color: #0040ff;
+  border-radius: 4px;
+  
+}
