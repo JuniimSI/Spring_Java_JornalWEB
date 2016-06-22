@@ -1,14 +1,14 @@
 <%@page import="org.apache.taglibs.standard.tag.common.xml.IfTag"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 
-<title>Lista de noticias</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Lista de noticias</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
  
@@ -26,12 +26,12 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<header class="row">
+		<header id="index" class="row">
 	         <jsp:include page="../header.jsp"></jsp:include>  
 	    </header>
 		<div class="row">
 			
-	    	<aside role="complementary" class="col-md-1">
+	    	<aside id="index"  role="complementary" class="col-md-1">
 	    		<jsp:include page="../left.jsp"></jsp:include>	    		
 	    	</aside>
 	    	
@@ -48,9 +48,11 @@
 															
 								<img align="left" width="300" height="200" alt="${n.titulo}" src="<c:url value="/resources/images/${n.imagem}.png" />" />
 								<div align="left">
+									<h2 style="color: black;">${n.secao.titulo}</h2>
 									<h2 style="color: black;">${n.titulo}</h2>
 									<h3 style="color: black;">${n.subtitulo }</h3>
-									
+									${n.data }  -- 
+									${n.usuario.nome} <br/><br/>
 								</div>	
 								<div align="right">
 									<c:if test="${papelusuario.papelId  == 1 || (papelusuario.papelId  == 2 && n.usuario.id == usuario_logado.id)}"> 
@@ -66,8 +68,7 @@
 									<div id="textoNot" >
 										${n.texto }
 									</div>
-									${n.data }  -- 
-									${n.usuario.nome} <br/><br/>
+									
 										<script type="text/javascript">
 												$("#comentarios").css("display", "none");
 												$("#esconderComentarios").css("display", "none");
@@ -112,8 +113,11 @@
 			<aside class="slider" role="complementary" class="col-md-3	">
 					<jsp:include page="../right.jsp"></jsp:include>
 	       	</aside>
-	       	
 		</div>
+		<footer class="row" id="index">
+		      <jsp:include page="../footer.jsp"></jsp:include>
+		</footer>
+		
 	</div>
 	
 		

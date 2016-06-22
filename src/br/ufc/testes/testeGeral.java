@@ -10,9 +10,11 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import br.ufc.criptofy.Criptografia;
+import br.ufc.dao.PapelUsuarioDAO;
 import br.ufc.dao.SecaoDAO;
 import br.ufc.dao.UsuarioDAO;
 import br.ufc.dao.interfaces.IUsuarioDAO;
+import br.ufc.model.PapelUsuario;
 import br.ufc.model.Secao;
 import br.ufc.model.Usuario;
 
@@ -50,9 +52,13 @@ public class testeGeral {
 
 		String n = "kkkkkkasdkkkkkkk";
 		System.out.println(n.contains("asd"));
-		IUsuarioDAO uDAO = new UsuarioDAO();
-		Usuario u = uDAO.recuperarUsuario(3L);
-		System.out.println(u.getNome());
+		
+		PapelUsuario pu = new PapelUsuario();
+		pu.setPapelId(1L);
+		pu.setUsuarioId(2L);
+		PapelUsuarioDAO puDAO = new PapelUsuarioDAO();
+		puDAO.inserirPapelUsuario(pu);
+		
 
 		
 		

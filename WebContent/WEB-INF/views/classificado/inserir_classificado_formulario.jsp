@@ -1,10 +1,9 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"  pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <title>Inserir Classificado</title>
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 	<link href="resources/css/style.css" rel="stylesheet">
@@ -17,26 +16,26 @@
 </head>
 <body>
 	<div class="container-fluid">
-	 	<header class="row">
+	 	<header id="index"  class="row">
 	        <jsp:include page="../header.jsp"></jsp:include>
 	    </header>
 		<div align="center" class="row">
 			<div role="main" class="col-md-8">
 				
-				<h2 style="color: black;">Adicionando novo classificado</h2>
+				<h2 style="color: white;">Adicionando novo classificado</h2>
 					<form role="form" action="inserirClassificado" method="post">
 						<div class="form-group">
-							<label style="color: black;">Titulo:</label>
+							<label style="color: white;">Titulo:</label>
 							<input type="text" name="titulo" placeholder="Titulo" class="form-control input-md"/> 
 						</div>
 						<div class="form-group">
-							<label style="color: black;">Texto:</label>
+							<label style="color: white;">Texto:</label>
 							<input type="text" name="texto" placeholder="Texto" class="form-control input-md"/> 
 							<form:errors path="classificado.texto" /> 
 						</div>
 							
 						<div class="form-group">	
-							<label style="color: black;">Telefone:</label>
+							<label style="color: white;">Telefone:</label>
 							<input id="inputTelefone"  type="text" name="telefone" placeholder="(99)9999-9999	" class="form-control input-md" /> 
 																		  
 							<script type="text/javascript">
@@ -46,7 +45,7 @@
 				        	</script>
 						</div>
 						<div class="form-group">	
-							<label style="color: black;">Preco:</label>
+							<label style="color: white;">Preco:</label>
 							<input type="text" name="preco" placeholder="Preço" class="form-control input-md" />
 						</div>
 				
@@ -57,10 +56,14 @@
 						<input type="submit" value="Enviar Cadastro"/>
 					</form>
 				</div>
-				<aside class="slider" role="complementary" class="col-md-3	">
+				<aside id="index" class="slider" role="complementary" class="col-md-3	">
 						<jsp:include page="../right.jsp"></jsp:include>
 	       	</aside>
 			</div>
+			<footer class="row" id="index">
+		      <jsp:include page="../footer.jsp"></jsp:include>
+		    </footer>
+			
 		</div>
 	
 </body>

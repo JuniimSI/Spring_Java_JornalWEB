@@ -1,10 +1,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <title>Lista de Classificados</title>
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 	<link href="resources/css/style.css" rel="stylesheet">
@@ -22,15 +22,16 @@
 			<div class="panel panel-primary">
 				<div align="center"  class="panel-body">
 					${c.titulo } <br />
-					
+					${c.texto } <br />
 					Preco Inicial: ${c.preco } <br />
+					Telefone: ${c.telefone } <br />
 					Melhor Oferta: ${c.melhorOferta } <br />
-					Update em: ${c.dataOferta }	 <br />
+					
 					
 				</div>
 				<div class="panel-footer">
-					${c.texto } <br />
-					${c.telefone } <br />
+					
+					Update em: ${c.dataOferta }	 <br />
 					<c:if test="${c.comprador != null }">
 						Comprador atual: ${c.comprador} <br/>
 					</c:if>

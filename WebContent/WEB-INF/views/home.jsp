@@ -1,6 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=ISO-8859-1" language="java" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 
     <link href="resources/css/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="resources/css/style.css" rel="stylesheet" type="text/css">
@@ -25,11 +25,11 @@
 </head>
 <body>
     <div class="container-fluid">
-	    <header class="row">
+	    <header id="index" class="row">
 	        <jsp:include page="header.jsp"></jsp:include>
 	    </header>
 	    <div class="row">
-	    	<aside id="ess" role="complementary" class="col-md-2">
+	    	<aside id="index" role="complementary" class="col-md-2">
 	    		<jsp:include page="left.jsp"></jsp:include>	    		
 	    	</aside>
 	    	
@@ -42,9 +42,8 @@
 	        </aside>
 	    </div>
 	    
-	    <footer class="row">
-	      <p>${data}</p> <br/>	
-	        <a class="btn" href="logout">Logout</a> <br />
+	    <footer class="row" id="index">
+	      <jsp:include page="footer.jsp"></jsp:include>
 	    </footer>
 	</div>
 	

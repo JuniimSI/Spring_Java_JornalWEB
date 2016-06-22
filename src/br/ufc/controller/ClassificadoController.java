@@ -103,7 +103,7 @@ public class ClassificadoController {
 	@RequestMapping("/inserirOferta")
 	public String inserirOferta(Classificado c, HttpSession session){
 		Classificado ac = cDAO.recuperarClassificado(c.getId());
-		if(ac.getMelhorOferta() < c.getMelhorOferta() || c.getMelhorOferta() > ac.getPreco()){
+		if(ac.getMelhorOferta() < c.getMelhorOferta() && c.getMelhorOferta() > ac.getPreco()){
 			c.setUsuario(uDAO.recuperarUsuario(c.getUsuarioId()));
 			
 			data = new Date();

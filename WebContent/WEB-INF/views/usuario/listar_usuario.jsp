@@ -1,12 +1,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Lista de Usuarios</title>
-<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Lista de Usuarios</title>
+	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
 	<link href="resources/css/style.css" rel="stylesheet">
 	<link href="resources/css/estilos.css" rel="stylesheet">
 		
@@ -20,14 +20,13 @@
 		<c:forEach var="u" items="${usuarios}"> 
 				<div class="panel panel-primary">
 					<div align="center"  class="panel-body">
-						<img align="left" width="100" height="60" alt="${u.nome}" src="<c:url value="/resources/images/${u.imagem}.png" />" /><br/>
+						<img align="left" width="100" height="60"  src="<c:url value="/resources/images/${u.imagem}.png" />" /><br/>
+						
 						${u.nome } <br/>
 						${u.email } <br/>
 					</div> <!-- panel body -->
 					<div class="panel-footer">
 						${u.login } <br/> 
-						
-						<a href="apagarUsuario?id=${u.id }">Apagar</a>
 					</div>
 				</div>			
 		</c:forEach>

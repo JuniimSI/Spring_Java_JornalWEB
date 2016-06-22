@@ -7,8 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div> 
-		<jsp:include page="secao/listar_secao.jsp"></jsp:include>
+	<div align="left">
+		<h3>Universidade Federal do Ceará</h3>
+		<h4 style="color: white">Autor: Francisco Fernandes Júnior</h4>
+	
+		<img align="right" src="resources/images/logo.gif" />
+			
 	</div>
 </body>
 </html>
