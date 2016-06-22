@@ -37,6 +37,7 @@
 	<bean id="comentarioDAO" class="br.ufc.dao.ComentarioDAO"/>
 	<bean id="classificadoDAO" class="br.ufc.dao.ClassificadoDAO"/>
 	<bean id="papelUsuarioDAO" class="br.ufc.dao.PapelUsuarioDAO"/>
+	<bean id="papelUsuario" class="br.ufc.model.PapelUsuario"/>
 	
 				
 	

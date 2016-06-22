@@ -40,9 +40,7 @@ public class UsuarioController {
 	@Qualifier(value="papelUsuarioDAO")
 	private IPapelUsuario puDAO;
 	
-	@Autowired
-	@Qualifier(value="papelUsuarioDAO")
-	private IPapelUsuario puDAO2;
+	
 
 	@Autowired
 	private ServletContext servletContext;
@@ -59,11 +57,16 @@ public class UsuarioController {
 	@RequestMapping("/inserirUsuario")
 	public String inserirUsuario(HttpSession session, @Valid Usuario u, BindingResult br, PapelUsuario pu, @RequestParam(value="imagem", required=false) MultipartFile imagem){
 		if(br.hasFieldErrors("nome"))
-			return "usuario/inserir_usuario_formulario";
+			return "usuario/inserir_usuario_formulario";	
 		
 		String image = u.getNome() + u.getLogin();
 		String path = servletContext.getRealPath("/")+"resources/images/"+image+".png";
 		u.setImagem(image);
+
+		if(pu.getPapelId() != 2){
+			u.setImagem("nao_jornalista");
+		}
+		
 		JornalFileUtil.salvarImagem(path, imagem);
 		
 		String senhaCrip = crip.criptografa(u.getSenha());
@@ -124,14 +127,8 @@ public class UsuarioController {
 		u.setImagem(a.getImagem());
 		u.setSenha(a.getSenha());
 		
+		
 		this.uDAO.alterarUsuario(u);
-		
-		PapelUsuario pu = new PapelUsuario();
-		
-		pu.setPapelId(papelIdz);
-		pu.setUsuarioId(u.getId());
-		System.out.println(papelIdz + " " + u.getId());
-		this.puDAO2.alterarPapelUsuario(pu);
 
 		List<Usuario> usuarios = this.uDAO.getLista();
 		session.setAttribute("usuarios", usuarios);	

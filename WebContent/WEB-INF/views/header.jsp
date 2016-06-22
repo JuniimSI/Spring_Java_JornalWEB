@@ -47,13 +47,16 @@
 		          				<ul class="dropdown-menu" role="menu" style="min-width: 200px">
 		            				<c:if test="${papelusuario.papelId == 1 }">
 		            					
+		            					
 		            					<li><a href="inserirUsuarioFormulario">Usuarios</a></li>
 		            					<li><a href="inserirSecaoFormulario">Seções</a></li>
 		            				</c:if>
 		            				<c:if test="${papelusuario.papelId == 2 }">
+		            					
 		            					<li><a href="#">Selecione a seção para inseriir uma nova noticia</a>
 		            				</c:if>
 		            				<c:if test="${papelusuario.papelId == 3 }">
+		            					
 		            					<li><a href="inserirClassificadoFormulario">Classificados</a></li>
 		            					
 		            				</c:if>

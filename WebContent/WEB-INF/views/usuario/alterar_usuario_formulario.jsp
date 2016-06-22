@@ -25,6 +25,7 @@
 					<div class="form-group">
 					<input type="hidden" name="id" value="${usuario.id }"/>
 					<input type="hidden" name="senha" value="${usuario.senha }"/>
+					<input type="hidden" name="papelIdz" value="${papelusuario.papelId }" />
 					
 			
 						<label style="color: white;">Nome:</label>
@@ -41,9 +42,6 @@
 						<label style="color: white;">Email:</label>
 						<input type="text" value="${usuario.email }" name="email" placeholder="client@servidor.dom" class="form-control input-md"/>
 					</div>
-					
-			      	
-			      	
 					
 					<input type="reset" value="Limpar"/>
 					<input type="submit" value="Cadastrar"/>

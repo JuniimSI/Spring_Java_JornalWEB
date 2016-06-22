@@ -27,6 +27,7 @@
 					</div> <!-- panel body -->
 					<div class="panel-footer">
 						${u.login } <br/> 
+						
 					</div>
 				</div>			
 		</c:forEach>
