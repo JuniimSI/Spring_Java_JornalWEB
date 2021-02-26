@@ -1,3 +1,10 @@
+# Application Spring (JAVA)
+
+Trabalho desenvolvido durante disciplina de desenvolvimento - UFC - Quixadá - Sistemas de Informação
+
+Dados para insert:
+
+```bash
 insert into PAPEL (PAPEL_NOME) values ('Editor');
 insert into PAPEL (PAPEL_NOME) values ('Jornalista');
 insert into PAPEL (PAPEL_NOME) values ('Leitor');
@@ -15,3 +22,5 @@ insert into PAPEL_USUARIO(USUARIO_ID, PAPEL_ID) values(2,3);
 
 insert into SECAO (SECAO_TITULO, SECAO_DESCRICAO) values ('Esporte', 'Tudo de esportes') , ('Ciencia','Tudo de ciencias');
 insert into CLASSIFICADO (COMPRADOR, CLASSIFICADO_MELHOR_OFERTA, CLASSIFICADO_PRECO, CLASSIFICADO_TELEFONE, CLASSIFICADO_TEXTO, CLASSIFICADO_TITULO, USUARIO_ID) values ('Leitor do Sistema', 100.0, 100.0,'(88)993180888', 'Olha esse imovel', 'Casa boa', 1);
+
+```
