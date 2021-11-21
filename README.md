@@ -2,6 +2,11 @@
 
 Trabalho desenvolvido durante disciplina de desenvolvimento - UFC - Quixadá - Sistemas de Informação
 
+## Tecs
+- Java
+- Spring Framework
+- JSP
+
 Dados para insert:
 
 ```bash
